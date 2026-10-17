@@ -46,7 +46,8 @@ Required service environment:
 
 | Variable | Value |
 |---|---|
-| `CB_DATABASE_URL` | Private PostgreSQL connection string |
+| `CB_DATABASE_URL` | Private PostgreSQL connection string; for SQLite use `sqlite:////data/claimbreaker.db` |
+| `CB_DATA_DIR` | `/data` (mount persistent storage here to retain local files across replacements) |
 | `CB_SUPABASE_URL` | Your project's HTTPS endpoint |
 | `CB_SUPABASE_SERVICE_KEY` | Private service key |
 | `CB_STORAGE_BUCKET` | `claimbreaker` (private bucket) |
@@ -63,6 +64,8 @@ Required service environment:
 Run `alembic upgrade head` against a new configured database before the application's first deployment. The first-release application also creates initial tables on startup for local ease. An already bootstrapped local database can be stamped `0001` only after confirming it matches the initial schema; do not run an initial create-table migration over existing tables. Future schema changes require new migration revisions. Case sources are uploaded to private object storage before their metadata commits. Local disk is a cache; PostgreSQL and private object storage are authoritative for hosted recovery.
 
 The application does not reject mutations based on the Origin header. HTTPS reverse proxies and changing service hostnames do not require `CB_PUBLIC_ORIGIN`; existing values are ignored. Signed HttpOnly SameSite=Strict session cookies and server-side case ownership checks remain enabled. No permissive CORS middleware is added.
+
+The container runs as UID 10001. Its default `/data` directory and the legacy `/app/.claimbreaker` directory are owned by that user. Prefer `/data` over copying the local `.env` storage paths into the cloud service. A mounted volume must also be writable by UID 10001; ownership set in the image cannot change a read-only or root-owned mount.
 
 ## 4. Validate the public service
 

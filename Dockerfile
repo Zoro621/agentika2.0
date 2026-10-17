@@ -13,7 +13,7 @@ COPY requirements.lock ./
 RUN pip install --no-cache-dir -r requirements.lock
 COPY pyproject.toml ./
 COPY backend ./backend
-RUN pip install --no-deps . && useradd --uid 10001 --create-home claimbreaker && mkdir /data && chown claimbreaker:claimbreaker /data
+RUN pip install --no-deps . && useradd --uid 10001 --create-home claimbreaker && mkdir -p /data /app/.claimbreaker && chown claimbreaker:claimbreaker /data /app/.claimbreaker
 COPY --from=frontend /build/dist ./dist
 COPY alembic.ini ./
 COPY migrations ./migrations

@@ -3,6 +3,44 @@ on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build production container
+        run: docker build -t claimbreaker:smoke .
+      - name: Verify non-root startup with default and legacy storage paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'docker rm -f claimbreaker-smoke >/dev/null 2>&1 || true' EXIT
+          for profile in default legacy; do
+            args=()
+            if [ "$profile" = legacy ]; then
+              args=(-e CB_DATA_DIR=.claimbreaker -e CB_DATABASE_URL=sqlite:///.claimbreaker/claimbreaker.db)
+            fi
+            docker run -d --name claimbreaker-smoke -p 127.0.0.1:5173:5173 -e CB_PROVIDER=deterministic -e CB_OFFLINE=true -e CB_RUNNER=none "${args[@]}" claimbreaker:smoke
+            if ! python - <<'PY'
+          import time, urllib.request
+          for attempt in range(60):
+              try:
+                  with urllib.request.urlopen('http://127.0.0.1:5173/api/v1/health/ready', timeout=2) as response:
+                      assert response.status == 200
+                  with urllib.request.urlopen('http://127.0.0.1:5173/', timeout=2) as response:
+                      assert response.status == 200
+                  break
+              except Exception:
+                  time.sleep(1)
+          else:
+              raise SystemExit('Container did not become ready')
+          PY
+            then
+              docker logs claimbreaker-smoke
+              exit 1
+            fi
+            docker exec claimbreaker-smoke python -c "import os; assert os.getuid() == 10001"
+            docker rm -f claimbreaker-smoke
+          done
   verify:
     runs-on: ubuntu-latest
     steps:
