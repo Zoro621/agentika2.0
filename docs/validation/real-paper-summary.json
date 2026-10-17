@@ -1,0 +1,38 @@
+{
+  "status": "awaiting_input",
+  "provider": "openai",
+  "model": "gpt-6-luna",
+  "coverage": {
+    "files_discovered": 266,
+    "files_inspected": 97,
+    "files_unavailable": 3,
+    "pdf_pages_inspected": 3,
+    "claims_examined": 2,
+    "checks_completed": 0,
+    "checks_skipped": 18,
+    "unresolved_questions": 1
+  },
+  "claims": 2,
+  "findings": [],
+  "executions": 0,
+  "grounded_evidence": true,
+  "warnings": [
+    "docs/sources/user_guide/general_concepts/activation-functions.ipynb: Notebook outputs are saved artifacts, not independently executed results",
+    "docs/sources/user_guide/file_io/data_find_filegroups/dir_2/file_1.csv: Parser could not inspect this file: EmptyDataError",
+    "docs/sources/user_guide/file_io/data_find_filegroups/dir_2/file_2.csv: Parser could not inspect this file: EmptyDataError",
+    "docs/sources/user_guide/file_io/data_find_filegroups/dir_2/file_3.csv: Parser could not inspect this file: EmptyDataError",
+    "docs/sources/user_guide/preprocessing/shuffle_arrays_unison.ipynb: Notebook outputs are saved artifacts, not independently executed results",
+    "docs/sources/user_guide/text/tokenizer.ipynb: Notebook outputs are saved artifacts, not independently executed results",
+    "Analysis budget: 100 prioritized artifacts inspected; remaining files are inventoried only"
+  ],
+  "questions": [
+    {
+      "title": "Which dataset corresponds to this experiment?",
+      "answer": null
+    },
+    {
+      "title": "Which paper corresponds to the repository experiment?",
+      "answer": "2373a808-aea9-4490-9aca-d00bbc7df5e5"
+    }
+  ]
+}

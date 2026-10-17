@@ -1,0 +1,1178 @@
+{
+  "id": "e731fc01-bd94-4dc4-ae84-5fdfe8c5007d",
+  "title": "Recorded synthetic measurement UI acceptance",
+  "status": "awaiting_input",
+  "revision": 1,
+  "provider": "openai",
+  "created_at": "2026-10-16T23:11:47.665004+00:00",
+  "updated_at": "2026-10-16T23:15:05.366790+00:00",
+  "sources": [
+    {
+      "type": "synthetic_sample",
+      "id": "leakage",
+      "label": "Synthetic demo; not published research",
+      "acquired_at": "2026-10-16T23:11:49.025564+00:00"
+    }
+  ],
+  "decisions": [
+    {
+      "question_id": "generalization",
+      "answer": "new_entities",
+      "rationale": "The synthetic fixture explicitly models deployment on previously unseen people.",
+      "revision": 1,
+      "at": "2026-10-16T23:14:33.761894+00:00"
+    }
+  ],
+  "result": {
+    "claims": [
+      {
+        "id": "claim-96fcf1fa95a452",
+        "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+        "quote": "Test accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).",
+        "type": "numerical",
+        "metric": "accuracy",
+        "value": 1.0,
+        "reported": "accuracy: 100.000%",
+        "tolerance": 5e-06,
+        "units": "fraction",
+        "context": {
+          "dataset": "synthetic_cohort",
+          "model": "RandomForestClassifier",
+          "split": "test",
+          "seed": "42"
+        },
+        "anchor": {
+          "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4:p1:fd0be8ef79:",
+          "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "path": "paper.pdf",
+          "text": "Test accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).",
+          "line": null,
+          "page": 1,
+          "cell": null,
+          "pointer": null,
+          "kind": "passage",
+          "context_excerpt": "CLAIMBREAKER / SYNTHETIC DEMO PAPER\nThe generalization gap\nThis document is a generated teaching fixture. It is not a published research paper and contains no real\nparticipant data.\nAbstract\nWe examine a small tabular classification experiment using synthetic observations. The intended deployment\npopulation must be established by a researcher before interpreting generalization.\nResults\nTest accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).\nDataset Metric Reported result\nsynthetic_cohort Test accuracy 100.000%\nMethods and source correspondence\nThe released source uses a fixed random seed of 42 and a 25% test partition. The associated result artifact\nrecords one computed baseline run. This fixture's paper and repository package are released together.\nLimitations\nScores describe this synthetic dataset only. A saved result is not an independent reproduction. Repeated\nobservations require a deployment-specific evaluation decision."
+        },
+        "origin": "deterministic extraction",
+        "context_provider": "openai"
+      },
+      {
+        "id": "claim-a112c695846ae3",
+        "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+        "quote": "synthetic_cohort Test accuracy 100.000%",
+        "type": "numerical",
+        "metric": "accuracy",
+        "value": 1.0,
+        "reported": "accuracy 100.000%",
+        "tolerance": 5e-06,
+        "units": "fraction",
+        "context": {},
+        "anchor": {
+          "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4:p1:fd0be8ef79:",
+          "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "path": "paper.pdf",
+          "text": "synthetic_cohort Test accuracy 100.000%",
+          "line": null,
+          "page": 1,
+          "cell": null,
+          "pointer": null,
+          "kind": "passage",
+          "context_excerpt": "CLAIMBREAKER / SYNTHETIC DEMO PAPER\nThe generalization gap\nThis document is a generated teaching fixture. It is not a published research paper and contains no real\nparticipant data.\nAbstract\nWe examine a small tabular classification experiment using synthetic observations. The intended deployment\npopulation must be established by a researcher before interpreting generalization.\nResults\nTest accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).\nDataset Metric Reported result\nsynthetic_cohort Test accuracy 100.000%\nMethods and source correspondence\nThe released source uses a fixed random seed of 42 and a 25% test partition. The associated result artifact\nrecords one computed baseline run. This fixture's paper and repository package are released together.\nLimitations\nScores describe this synthetic dataset only. A saved result is not an independent reproduction. Repeated\nobservations require a deployment-specific evaluation decision."
+        },
+        "origin": "deterministic extraction"
+      },
+      {
+        "id": "claim-887e0acd118ec0",
+        "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+        "quote": "The released source uses a fixed random seed of 42 and a 25% test partition.",
+        "type": "method",
+        "metric": null,
+        "value": null,
+        "units": "% test partition",
+        "dataset": null,
+        "model": null,
+        "split": "test",
+        "qualifiers": "Fixed random seed of 42.",
+        "anchor": {
+          "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4:p1:fd0be8ef79:",
+          "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "path": "paper.pdf",
+          "text": "The released source uses a fixed random seed of 42 and a 25% test partition.",
+          "line": null,
+          "page": 1,
+          "cell": null,
+          "pointer": null,
+          "kind": "passage",
+          "context_excerpt": "CLAIMBREAKER / SYNTHETIC DEMO PAPER\nThe generalization gap\nThis document is a generated teaching fixture. It is not a published research paper and contains no real\nparticipant data.\nAbstract\nWe examine a small tabular classification experiment using synthetic observations. The intended deployment\npopulation must be established by a researcher before interpreting generalization.\nResults\nTest accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).\nDataset Metric Reported result\nsynthetic_cohort Test accuracy 100.000%\nMethods and source correspondence\nThe released source uses a fixed random seed of 42 and a 25% test partition. The associated result artifact\nrecords one computed baseline run. This fixture's paper and repository package are released together.\nLimitations\nScores describe this synthetic dataset only. A saved result is not an independent reproduction. Repeated\nobservations require a deployment-specific evaluation decision."
+        },
+        "context": {
+          "split": "test"
+        },
+        "origin": "openai",
+        "tolerance": 0,
+        "reported": "The released source uses a fixed random seed of 42 and a 25% test part",
+        "numeric_validation": "contextual statement; no independently parsed quantity"
+      },
+      {
+        "id": "claim-08cf97f9b2c937",
+        "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+        "quote": "The associated result artifact records one computed baseline run.",
+        "type": "sample_count",
+        "metric": null,
+        "value": null,
+        "units": "run",
+        "dataset": null,
+        "model": null,
+        "split": null,
+        "qualifiers": "One computed baseline run.",
+        "anchor": {
+          "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4:p1:fd0be8ef79:",
+          "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "path": "paper.pdf",
+          "text": "The associated result artifact records one computed baseline run.",
+          "line": null,
+          "page": 1,
+          "cell": null,
+          "pointer": null,
+          "kind": "passage",
+          "context_excerpt": "CLAIMBREAKER / SYNTHETIC DEMO PAPER\nThe generalization gap\nThis document is a generated teaching fixture. It is not a published research paper and contains no real\nparticipant data.\nAbstract\nWe examine a small tabular classification experiment using synthetic observations. The intended deployment\npopulation must be established by a researcher before interpreting generalization.\nResults\nTest accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).\nDataset Metric Reported result\nsynthetic_cohort Test accuracy 100.000%\nMethods and source correspondence\nThe released source uses a fixed random seed of 42 and a 25% test partition. The associated result artifact\nrecords one computed baseline run. This fixture's paper and repository package are released together.\nLimitations\nScores describe this synthetic dataset only. A saved result is not an independent reproduction. Repeated\nobservations require a deployment-specific evaluation decision."
+        },
+        "context": {},
+        "origin": "openai",
+        "tolerance": 0,
+        "reported": "The associated result artifact records one computed baseline run.",
+        "numeric_validation": "contextual statement; no independently parsed quantity"
+      },
+      {
+        "id": "claim-846c5233716a65",
+        "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+        "quote": "Scores describe this synthetic dataset only.",
+        "type": "generalization",
+        "metric": null,
+        "value": null,
+        "units": null,
+        "dataset": "synthetic dataset",
+        "model": null,
+        "split": null,
+        "qualifiers": "Scope limited to this synthetic dataset only.",
+        "anchor": {
+          "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4:p1:fd0be8ef79:",
+          "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "path": "paper.pdf",
+          "text": "Scores describe this synthetic dataset only.",
+          "line": null,
+          "page": 1,
+          "cell": null,
+          "pointer": null,
+          "kind": "passage",
+          "context_excerpt": "CLAIMBREAKER / SYNTHETIC DEMO PAPER\nThe generalization gap\nThis document is a generated teaching fixture. It is not a published research paper and contains no real\nparticipant data.\nAbstract\nWe examine a small tabular classification experiment using synthetic observations. The intended deployment\npopulation must be established by a researcher before interpreting generalization.\nResults\nTest accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).\nDataset Metric Reported result\nsynthetic_cohort Test accuracy 100.000%\nMethods and source correspondence\nThe released source uses a fixed random seed of 42 and a 25% test partition. The associated result artifact\nrecords one computed baseline run. This fixture's paper and repository package are released together.\nLimitations\nScores describe this synthetic dataset only. A saved result is not an independent reproduction. Repeated\nobservations require a deployment-specific evaluation decision."
+        },
+        "context": {
+          "dataset": "synthetic dataset"
+        },
+        "origin": "openai",
+        "tolerance": 0,
+        "reported": "Scores describe this synthetic dataset only.",
+        "numeric_validation": "contextual statement; no independently parsed quantity"
+      },
+      {
+        "id": "claim-fd9c9870db0d89",
+        "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+        "quote": "A saved result is not an independent reproduction.",
+        "type": "generalization",
+        "metric": null,
+        "value": null,
+        "units": null,
+        "dataset": null,
+        "model": null,
+        "split": null,
+        "qualifiers": "Explicitly states that a saved result is not an independent reproduction.",
+        "anchor": {
+          "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4:p1:fd0be8ef79:",
+          "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "path": "paper.pdf",
+          "text": "A saved result is not an independent reproduction.",
+          "line": null,
+          "page": 1,
+          "cell": null,
+          "pointer": null,
+          "kind": "passage",
+          "context_excerpt": "CLAIMBREAKER / SYNTHETIC DEMO PAPER\nThe generalization gap\nThis document is a generated teaching fixture. It is not a published research paper and contains no real\nparticipant data.\nAbstract\nWe examine a small tabular classification experiment using synthetic observations. The intended deployment\npopulation must be established by a researcher before interpreting generalization.\nResults\nTest accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).\nDataset Metric Reported result\nsynthetic_cohort Test accuracy 100.000%\nMethods and source correspondence\nThe released source uses a fixed random seed of 42 and a 25% test partition. The associated result artifact\nrecords one computed baseline run. This fixture's paper and repository package are released together.\nLimitations\nScores describe this synthetic dataset only. A saved result is not an independent reproduction. Repeated\nobservations require a deployment-specific evaluation decision."
+        },
+        "context": {},
+        "origin": "openai",
+        "tolerance": 0,
+        "reported": "A saved result is not an independent reproduction.",
+        "numeric_validation": "contextual statement; no independently parsed quantity"
+      },
+      {
+        "id": "claim-7eff26a637478a",
+        "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+        "quote": "The intended deployment population must be established by a researcher before interpreting generalization.",
+        "type": "generalization",
+        "metric": null,
+        "value": null,
+        "units": null,
+        "dataset": null,
+        "model": null,
+        "split": null,
+        "qualifiers": "Population must be established by a researcher before interpreting generalization.",
+        "anchor": {
+          "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4:p1:fd0be8ef79:",
+          "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "path": "paper.pdf",
+          "text": "The intended deployment population must be established by a researcher before interpreting generalization.",
+          "line": null,
+          "page": 1,
+          "cell": null,
+          "pointer": null,
+          "kind": "passage",
+          "context_excerpt": "CLAIMBREAKER / SYNTHETIC DEMO PAPER\nThe generalization gap\nThis document is a generated teaching fixture. It is not a published research paper and contains no real\nparticipant data.\nAbstract\nWe examine a small tabular classification experiment using synthetic observations. The intended deployment\npopulation must be established by a researcher before interpreting generalization.\nResults\nTest accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).\nDataset Metric Reported result\nsynthetic_cohort Test accuracy 100.000%\nMethods and source correspondence\nThe released source uses a fixed random seed of 42 and a 25% test partition. The associated result artifact\nrecords one computed baseline run. This fixture's paper and repository package are released together.\nLimitations\nScores describe this synthetic dataset only. A saved result is not an independent reproduction. Repeated\nobservations require a deployment-specific evaluation decision."
+        },
+        "context": {},
+        "origin": "openai",
+        "tolerance": 0,
+        "reported": "The intended deployment population must be established by a researcher",
+        "numeric_validation": "contextual statement; no independently parsed quantity"
+      },
+      {
+        "id": "claim-ac8d57f3562075",
+        "artifact_id": "a66cf322-5e55-4794-bace-185c8705207b",
+        "quote": "SYNTHETIC DEMO FIXTURE. Not published research. No real participants.",
+        "type": "sample_count",
+        "metric": null,
+        "value": null,
+        "units": null,
+        "dataset": null,
+        "model": null,
+        "split": null,
+        "qualifiers": "The source describes this as a synthetic demo fixture, says it is not published research, and states there were no real participants.",
+        "anchor": {
+          "id": "a66cf322-5e55-4794-bace-185c8705207b:L1:9751f85207:",
+          "artifact_id": "a66cf322-5e55-4794-bace-185c8705207b",
+          "path": "README.md",
+          "text": "SYNTHETIC DEMO FIXTURE. Not published research. No real participants.",
+          "line": 1,
+          "page": null,
+          "cell": null,
+          "pointer": null,
+          "kind": "passage",
+          "context_excerpt": "# The generalization gap\n\nSYNTHETIC DEMO FIXTURE. Not published research. No real participants.\n\nRead paper.pdf, train.py and results.json together. The experiment target and features are explicit in source."
+        },
+        "context": {},
+        "origin": "openai",
+        "tolerance": 0,
+        "reported": "SYNTHETIC DEMO FIXTURE. Not published research. No real participants.",
+        "numeric_validation": "contextual statement; no independently parsed quantity"
+      }
+    ],
+    "findings": [
+      {
+        "id": "finding-a7257c613a4c1b",
+        "title": "Repeated individuals may cross the evaluation boundary",
+        "kind": "methodology",
+        "evidence_status": "supported_concern",
+        "impact": "high",
+        "explanation": "Repeated observations were found for person_id. A random row split may mix the same individual across training and test partitions.",
+        "evidence": [
+          {
+            "id": "e83b6529-2740-432a-aa40-7afc8123af13:L1:f84c2e28f5:",
+            "artifact_id": "e83b6529-2740-432a-aa40-7afc8123af13",
+            "path": "cohort.csv",
+            "text": "Dataset: cohort.csv\nRows inspected: 960\nColumns: signature_0, signature_1, signature_2, signature_3, signature_4, person_id, outcome\nRepeated entity rows: {'person_id': 840}\nDuplicate rows: 840",
+            "line": 1,
+            "page": null,
+            "cell": null,
+            "pointer": null,
+            "kind": "dataset"
+          }
+        ],
+        "observed": {
+          "repeated_rows": {
+            "person_id": 840
+          }
+        },
+        "alternatives": [
+          "Row-level evaluation may be appropriate when predicting observations for known individuals"
+        ],
+        "limitations": [
+          "Entity semantics and intended deployment require human judgment"
+        ],
+        "next_action": "Confirm the intended population, then inspect a grouped re-evaluation.",
+        "review_status": "unreviewed",
+        "review_note": "",
+        "superseded": false
+      },
+      {
+        "id": "finding-eb8d2de1492410",
+        "title": "New-individual evaluation changes the evidence boundary",
+        "kind": "corrected_evaluation",
+        "evidence_status": "supported_concern",
+        "impact": "high",
+        "explanation": "You confirmed that deployment concerns new individuals. The measured baseline shared entities across partitions, while the corrected grouped evaluation kept them separate. Inspect the actual metrics and original/reconstructed classification in both manifests.",
+        "evidence": [
+          {
+            "id": "68b666b6-577e-4738-8a81-f0f5db51ca69:output",
+            "execution_id": "68b666b6-577e-4738-8a81-f0f5db51ca69",
+            "path": "Run 68b666b6",
+            "kind": "execution",
+            "text": "{\n  \"variant\": \"baseline\",\n  \"metrics\": {\n    \"accuracy\": 1.0\n  },\n  \"entity_overlap\": 109,\n  \"input_sha256\": \"9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531\"\n}"
+          },
+          {
+            "id": "31458d76-5c82-490f-87b6-28c9707043e4:output",
+            "execution_id": "31458d76-5c82-490f-87b6-28c9707043e4",
+            "path": "Run 31458d76",
+            "kind": "execution",
+            "text": "{\n  \"variant\": \"grouped\",\n  \"metrics\": {\n    \"accuracy\": 0.5,\n    \"f1_macro\": 0.4994438264738599\n  },\n  \"entity_overlap\": 0,\n  \"input_sha256\": \"9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531\"\n}"
+          }
+        ],
+        "observed": {
+          "baseline_metrics": {
+            "accuracy": 1.0
+          },
+          "corrected_metrics": {
+            "accuracy": 0.5,
+            "f1_macro": 0.4994438264738599
+          },
+          "baseline_entity_overlap": 109,
+          "corrected_entity_overlap": 0
+        },
+        "alternatives": [
+          "Group composition and seed variation can also change performance"
+        ],
+        "limitations": [
+          "The baseline may be original execution or reconstruction, as labeled; the grouped run is an explicitly changed protocol",
+          "One corrected split does not establish statistical significance or misconduct"
+        ],
+        "next_action": "Review the actual run manifests and evaluate stability across additional group splits before making a broader claim.",
+        "review_status": "unreviewed",
+        "review_note": "",
+        "superseded": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "check-73b0e4a3809ceb",
+        "name": "Claim \u2194 saved result",
+        "status": "passed",
+        "detail": "Reported 1; artifact 1",
+        "claim_id": "claim-96fcf1fa95a452",
+        "artifact_id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+        "evidence": [
+          {
+            "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4:p1:fd0be8ef79:",
+            "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+            "path": "paper.pdf",
+            "text": "Test accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).",
+            "line": null,
+            "page": 1,
+            "cell": null,
+            "pointer": null,
+            "kind": "passage",
+            "context_excerpt": "CLAIMBREAKER / SYNTHETIC DEMO PAPER\nThe generalization gap\nThis document is a generated teaching fixture. It is not a published research paper and contains no real\nparticipant data.\nAbstract\nWe examine a small tabular classification experiment using synthetic observations. The intended deployment\npopulation must be established by a researcher before interpreting generalization.\nResults\nTest accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).\nDataset Metric Reported result\nsynthetic_cohort Test accuracy 100.000%\nMethods and source correspondence\nThe released source uses a fixed random seed of 42 and a 25% test partition. The associated result artifact\nrecords one computed baseline run. This fixture's paper and repository package are released together.\nLimitations\nScores describe this synthetic dataset only. A saved result is not an independent reproduction. Repeated\nobservations require a deployment-specific evaluation decision."
+          },
+          {
+            "id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc/accuracy",
+            "artifact_id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+            "path": "results.json",
+            "pointer": "/accuracy",
+            "line": null,
+            "kind": "result",
+            "text": "/accuracy: 1.0\nContext: {'dataset': 'synthetic_cohort', 'model': 'RandomForestClassifier', 'split': 'test', 'seed': '42', 'artifact_type': 'computed synthetic fixture result'}"
+          }
+        ]
+      },
+      {
+        "id": "check-d9b04f5cf0dc81",
+        "name": "Claim \u2194 saved result",
+        "status": "passed",
+        "detail": "Reported 1; artifact 1",
+        "claim_id": "claim-a112c695846ae3",
+        "artifact_id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+        "evidence": [
+          {
+            "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4:p1:fd0be8ef79:",
+            "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+            "path": "paper.pdf",
+            "text": "synthetic_cohort Test accuracy 100.000%",
+            "line": null,
+            "page": 1,
+            "cell": null,
+            "pointer": null,
+            "kind": "passage",
+            "context_excerpt": "CLAIMBREAKER / SYNTHETIC DEMO PAPER\nThe generalization gap\nThis document is a generated teaching fixture. It is not a published research paper and contains no real\nparticipant data.\nAbstract\nWe examine a small tabular classification experiment using synthetic observations. The intended deployment\npopulation must be established by a researcher before interpreting generalization.\nResults\nTest accuracy: 100.000% (dataset=synthetic_cohort model=RandomForestClassifier split=test seed=42).\nDataset Metric Reported result\nsynthetic_cohort Test accuracy 100.000%\nMethods and source correspondence\nThe released source uses a fixed random seed of 42 and a 25% test partition. The associated result artifact\nrecords one computed baseline run. This fixture's paper and repository package are released together.\nLimitations\nScores describe this synthetic dataset only. A saved result is not an independent reproduction. Repeated\nobservations require a deployment-specific evaluation decision."
+          },
+          {
+            "id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc/accuracy",
+            "artifact_id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+            "path": "results.json",
+            "pointer": "/accuracy",
+            "line": null,
+            "kind": "result",
+            "text": "/accuracy: 1.0\nContext: {'dataset': 'synthetic_cohort', 'model': 'RandomForestClassifier', 'split': 'test', 'seed': '42', 'artifact_type': 'computed synthetic fixture result'}"
+          }
+        ]
+      },
+      {
+        "id": "check-278243e6c233a1",
+        "name": "Paper \u2194 code random seed",
+        "status": "passed",
+        "detail": "Paper 42; source 42. Source corresponds to train.py."
+      },
+      {
+        "id": "check-91695498022a4d",
+        "name": "Paper \u2194 code test fraction",
+        "status": "passed",
+        "detail": "Paper 0.25; source 0.25. Source corresponds to train.py."
+      },
+      {
+        "id": "execution-68b666b6-577e-4738-8a81-f0f5db51ca69",
+        "name": "Supported CPU evaluation",
+        "status": "passed",
+        "detail": "baseline: completed. Original source executed in isolation; inspect measured provenance and publication comparability."
+      },
+      {
+        "id": "execution-31458d76-5c82-490f-87b6-28c9707043e4",
+        "name": "Supported CPU evaluation",
+        "status": "passed",
+        "detail": "grouped: completed. Trusted reconstruction; not an independent reproduction."
+      },
+      {
+        "id": "grouped-isolation",
+        "name": "Entity-separated evaluation",
+        "status": "passed",
+        "detail": "Corrected evaluation measured zero entity overlap. Results describe a changed protocol, not an independent reproduction."
+      }
+    ],
+    "questions": [
+      {
+        "id": "generalization",
+        "title": "What should this model generalize to?",
+        "why": "Repeated entities appear in the dataset, while the code uses a random row split. The right evaluation depends on the intended use.",
+        "evidence": [
+          {
+            "id": "e83b6529-2740-432a-aa40-7afc8123af13:L1:f84c2e28f5:",
+            "artifact_id": "e83b6529-2740-432a-aa40-7afc8123af13",
+            "path": "cohort.csv",
+            "text": "Dataset: cohort.csv\nRows inspected: 960\nColumns: signature_0, signature_1, signature_2, signature_3, signature_4, person_id, outcome\nRepeated entity rows: {'person_id': 840}\nDuplicate rows: 840",
+            "line": 1,
+            "page": null,
+            "cell": null,
+            "pointer": null,
+            "kind": "dataset"
+          }
+        ],
+        "options": [
+          {
+            "value": "new_entities",
+            "label": "New individuals",
+            "effect": "Keep each entity entirely within one partition and rerun grouped evaluation."
+          },
+          {
+            "value": "known_entities",
+            "label": "New observations of known individuals",
+            "effect": "Keep the row-level interpretation, with its dependence assumptions visible."
+          },
+          {
+            "value": "unknown",
+            "label": "I don't know yet",
+            "effect": "Leave the generalization claim unresolved; continue independent checks."
+          }
+        ],
+        "answer": "new_entities"
+      },
+      {
+        "id": "interpretation-4de9ccf326ea4e",
+        "title": "What population should the evaluation represent?",
+        "why": "If evaluation is intended to represent prediction for unseen individuals, a row-level split may not estimate that setting; if it represents future observations for known individuals, row-level evaluation may be appropriate. The supplied evidence flags this distinction but says entity semantics and intended deployment require human judgment.",
+        "evidence": [
+          {
+            "id": "e83b6529-2740-432a-aa40-7afc8123af13:L1:f84c2e28f5:",
+            "artifact_id": "e83b6529-2740-432a-aa40-7afc8123af13",
+            "path": "cohort.csv",
+            "text": "Repeated entity rows: {'person_id': 840}",
+            "line": 1,
+            "page": null,
+            "cell": null,
+            "pointer": null,
+            "kind": "dataset",
+            "context_excerpt": "Dataset: cohort.csv\nRows inspected: 960\nColumns: signature_0, signature_1, signature_2, signature_3, signature_4, person_id, outcome\nRepeated entity rows: {'person_id': 840}\nDuplicate rows: 840"
+          }
+        ],
+        "options": [
+          {
+            "value": "confirmed",
+            "label": "The stated interpretation applies",
+            "effect": "Retain the concern with this researcher-established context; this does not by itself verify a result."
+          },
+          {
+            "value": "alternative",
+            "label": "A different interpretation applies",
+            "effect": "Mark related findings inconclusive and require revised scientific context."
+          },
+          {
+            "value": "unknown",
+            "label": "I cannot establish that",
+            "effect": "Mark dependent interpretation inconclusive; independent checks continue."
+          }
+        ],
+        "answer": null,
+        "origin": "grounded model clarification",
+        "related_findings": [
+          "finding-a7257c613a4c1b"
+        ],
+        "purpose": "interpretation"
+      }
+    ],
+    "executions": [
+      {
+        "id": "68b666b6-577e-4738-8a81-f0f5db51ca69",
+        "status": "completed",
+        "manifest": {
+          "dataset_id": "e83b6529-2740-432a-aa40-7afc8123af13",
+          "code_id": "8f4de747-2695-49ca-a686-a30afd51f769",
+          "target": "outcome",
+          "features": [
+            "signature_0",
+            "signature_1",
+            "signature_2",
+            "signature_3",
+            "signature_4"
+          ],
+          "estimator": "RandomForestClassifier",
+          "params": {
+            "n_estimators": 80,
+            "random_state": 42,
+            "n_jobs": 1
+          },
+          "seed": 42,
+          "seed_origin": "source",
+          "test_size": 0.25,
+          "entity": "person_id",
+          "scaling": false,
+          "stratify": false,
+          "imputer_strategy": "median",
+          "exclude": [],
+          "variant": "baseline",
+          "cv": null,
+          "execution_mode": "original",
+          "entry_path": "train.py",
+          "source_hashes": {
+            "cohort.csv": "9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531",
+            "config.yaml": "d89494b6f572338ab1c2406f953752f47762462f7e45aefcbb06a7b609fb50b6",
+            "train.py": "37b10d2374573de752a6c6ef818398b1df2d2d1cb5210d470e3bfce115788dea"
+          },
+          "original_helper_sha256": "5504fc7a5906670eacb9d8549cd9468fed629a43301330fa6c7f93ed2ff68ce5",
+          "input_sha256": "9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531",
+          "input_decoding": "UTF-8; an optional BOM is removed. The worker separately hashes the exact decoded UTF-8 text.",
+          "worker_sha256": "fd9790c40c61ee7c3b1e0a79201cd8d8491a130af628279b946c552752a87ea3",
+          "environment_image": "OpenAI disposable 1g Python sandbox; package versions recorded by the actual run",
+          "revision": 0,
+          "classification": "original_execution",
+          "runner": "openai"
+        },
+        "output": {
+          "metrics": {
+            "accuracy": 1.0
+          },
+          "metric_events": [
+            {
+              "metric": "accuracy",
+              "value": 1.0,
+              "path": "train.py",
+              "line": 12
+            }
+          ],
+          "folds": [],
+          "repairs": [],
+          "stdout": "accuracy 1.0\n",
+          "entity_overlap": 109,
+          "environment": {
+            "python": "3.13.5",
+            "sklearn": "1.8.0",
+            "pandas": "2.2.3",
+            "numpy": "2.3.5"
+          },
+          "classification": "original_execution",
+          "seconds": 1.274,
+          "source_hashes": {
+            "cohort.csv": "9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531",
+            "config.yaml": "d89494b6f572338ab1c2406f953752f47762462f7e45aefcbb06a7b609fb50b6",
+            "train.py": "37b10d2374573de752a6c6ef818398b1df2d2d1cb5210d470e3bfce115788dea"
+          },
+          "helper_sha256": "5504fc7a5906670eacb9d8549cd9468fed629a43301330fa6c7f93ed2ff68ce5",
+          "limitations": [
+            "Original code ran in isolation with metric instrumentation; publication comparability still depends on protocol, dataset, version and human correspondence",
+            "No dependencies were installed and no scientific settings were repaired"
+          ],
+          "dataset_sha256": "9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531",
+          "worker_sha256": "fd9790c40c61ee7c3b1e0a79201cd8d8491a130af628279b946c552752a87ea3",
+          "spec": {
+            "dataset_id": "e83b6529-2740-432a-aa40-7afc8123af13",
+            "code_id": "8f4de747-2695-49ca-a686-a30afd51f769",
+            "target": "outcome",
+            "features": [
+              "signature_0",
+              "signature_1",
+              "signature_2",
+              "signature_3",
+              "signature_4"
+            ],
+            "estimator": "RandomForestClassifier",
+            "params": {
+              "n_estimators": 80,
+              "random_state": 42,
+              "n_jobs": 1
+            },
+            "seed": 42,
+            "seed_origin": "source",
+            "test_size": 0.25,
+            "entity": "person_id",
+            "scaling": false,
+            "stratify": false,
+            "imputer_strategy": "median",
+            "exclude": [],
+            "variant": "baseline",
+            "cv": null,
+            "execution_mode": "original",
+            "entry_path": "train.py"
+          },
+          "sandbox": {
+            "provider": "openai",
+            "container_id": "cntr_6ad2afd7f2c48191b4005392f0d949100de94d2e75cb602b",
+            "memory_limit": "1g",
+            "network_policy": "disabled",
+            "output_file_id": "cfile_6ad2afdfee208191bb37c8acb4c94983",
+            "tool_call_id": "ci_0d4fdcf8b688bcc0016ad2afdc322c87d2bcd26a3fc0e20a53"
+          }
+        },
+        "created_at": "2026-10-16T23:14:21.482845+00:00"
+      },
+      {
+        "id": "31458d76-5c82-490f-87b6-28c9707043e4",
+        "status": "completed",
+        "manifest": {
+          "dataset_id": "e83b6529-2740-432a-aa40-7afc8123af13",
+          "code_id": "8f4de747-2695-49ca-a686-a30afd51f769",
+          "target": "outcome",
+          "features": [
+            "signature_0",
+            "signature_1",
+            "signature_2",
+            "signature_3",
+            "signature_4"
+          ],
+          "estimator": "RandomForestClassifier",
+          "params": {
+            "n_estimators": 80,
+            "random_state": 42,
+            "n_jobs": 1
+          },
+          "seed": 42,
+          "seed_origin": "source",
+          "test_size": 0.25,
+          "entity": "person_id",
+          "scaling": false,
+          "stratify": false,
+          "imputer_strategy": "median",
+          "exclude": [],
+          "variant": "grouped",
+          "cv": null,
+          "execution_mode": "reconstruction",
+          "entry_path": "train.py",
+          "split_mode": "grouped",
+          "time_column": null,
+          "source_hashes": {},
+          "original_helper_sha256": null,
+          "input_sha256": "9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531",
+          "input_decoding": "UTF-8; an optional BOM is removed. The worker separately hashes the exact decoded UTF-8 text.",
+          "worker_sha256": "fd9790c40c61ee7c3b1e0a79201cd8d8491a130af628279b946c552752a87ea3",
+          "environment_image": "OpenAI disposable 1g Python sandbox; package versions recorded by the actual run",
+          "revision": 1,
+          "classification": "corrected_protocol",
+          "runner": "openai"
+        },
+        "output": {
+          "metrics": {
+            "accuracy": 0.5,
+            "f1_macro": 0.4994438264738599
+          },
+          "folds": [],
+          "aggregation": "single held-out split",
+          "train_rows": 720,
+          "test_rows": 240,
+          "entity_overlap": 0,
+          "features": [
+            "signature_0",
+            "signature_1",
+            "signature_2",
+            "signature_3",
+            "signature_4"
+          ],
+          "confusion_matrix": [
+            [
+              56,
+              72
+            ],
+            [
+              48,
+              64
+            ]
+          ],
+          "seconds": 0.104,
+          "environment": {
+            "python": "3.13.5",
+            "sklearn": "1.8.0",
+            "pandas": "2.2.3",
+            "numpy": "2.3.5"
+          },
+          "classification": "corrected_protocol",
+          "limitations": [
+            "Trusted reconstruction from discovered settings; original repository code was not executed",
+            "Preprocessing is fitted within the training pipeline",
+            "This run alone is not a directly comparable reproduction of a published result"
+          ],
+          "dataset_sha256": "9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531",
+          "worker_sha256": "fd9790c40c61ee7c3b1e0a79201cd8d8491a130af628279b946c552752a87ea3",
+          "spec": {
+            "dataset_id": "e83b6529-2740-432a-aa40-7afc8123af13",
+            "code_id": "8f4de747-2695-49ca-a686-a30afd51f769",
+            "target": "outcome",
+            "features": [
+              "signature_0",
+              "signature_1",
+              "signature_2",
+              "signature_3",
+              "signature_4"
+            ],
+            "estimator": "RandomForestClassifier",
+            "params": {
+              "n_estimators": 80,
+              "random_state": 42,
+              "n_jobs": 1
+            },
+            "seed": 42,
+            "seed_origin": "source",
+            "test_size": 0.25,
+            "entity": "person_id",
+            "scaling": false,
+            "stratify": false,
+            "imputer_strategy": "median",
+            "exclude": [],
+            "variant": "grouped",
+            "cv": null,
+            "execution_mode": "reconstruction",
+            "entry_path": "train.py",
+            "split_mode": "grouped",
+            "time_column": null
+          },
+          "sandbox": {
+            "provider": "openai",
+            "container_id": "cntr_6ad2aff73d5c8191a086f522d86bd5be09c41c1db2c19123",
+            "memory_limit": "1g",
+            "network_policy": "disabled",
+            "output_file_id": "cfile_6ad2b0002e58819192e63019279ab75e",
+            "tool_call_id": "ci_00be7f47665efcae016ad2affc4d3c87d2858fec2926fd2d1c"
+          }
+        },
+        "created_at": "2026-10-16T23:14:52.609086+00:00"
+      }
+    ],
+    "warnings": [],
+    "agent_actions": [],
+    "provider": "openai",
+    "coverage": {
+      "files_discovered": 6,
+      "files_inspected": 6,
+      "files_unavailable": 0,
+      "pdf_pages_inspected": 1,
+      "claims_examined": 8,
+      "checks_completed": 7,
+      "checks_skipped": 0,
+      "unresolved_questions": 1
+    },
+    "history": [],
+    "_resume_count": 0,
+    "_provider_budget": {
+      "steps": 13,
+      "input_chars": 239778
+    },
+    "_revision": 1,
+    "_elapsed_seconds": 84.64,
+    "_source_fingerprint": "383e88dc6a0a25870f46a8470c31630c20129e16abd1d65fa0e61a190a7d7861",
+    "model": "gpt-6-luna",
+    "artifacts": [
+      {
+        "id": "a66cf322-5e55-4794-bace-185c8705207b",
+        "path": "README.md",
+        "kind": "documentation",
+        "size": 208,
+        "sha256": "cbd8f74a1246fe7b166d926d7d70ed23468b6b19e52ba812e5a4446026542adb"
+      },
+      {
+        "id": "e83b6529-2740-432a-aa40-7afc8123af13",
+        "path": "cohort.csv",
+        "kind": "data",
+        "size": 100479,
+        "sha256": "9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531"
+      },
+      {
+        "id": "08e46e81-1f5c-406a-a4cd-97ca5c624789",
+        "path": "config.yaml",
+        "kind": "configuration",
+        "size": 77,
+        "sha256": "d89494b6f572338ab1c2406f953752f47762462f7e45aefcbb06a7b609fb50b6"
+      },
+      {
+        "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+        "path": "paper.pdf",
+        "kind": "paper",
+        "size": 2652,
+        "sha256": "e428eb0cde02e4914f27d1ff9e2709f195296ce4cc791b5094f2a2d21707f73b"
+      },
+      {
+        "id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+        "path": "results.json",
+        "kind": "results",
+        "size": 468,
+        "sha256": "b08400e371b141923ef251f507245ed820f879b488813af1c9050d5392b1a5bd"
+      },
+      {
+        "id": "8f4de747-2695-49ca-a686-a30afd51f769",
+        "path": "train.py",
+        "kind": "code",
+        "size": 637,
+        "sha256": "37b10d2374573de752a6c6ef818398b1df2d2d1cb5210d470e3bfce115788dea"
+      }
+    ],
+    "_claims_complete": true,
+    "graph": {
+      "nodes": [
+        {
+          "id": "a66cf322-5e55-4794-bace-185c8705207b",
+          "label": "README.md",
+          "type": "documentation",
+          "artifact_id": "a66cf322-5e55-4794-bace-185c8705207b",
+          "path": "README.md"
+        },
+        {
+          "id": "e83b6529-2740-432a-aa40-7afc8123af13",
+          "label": "cohort.csv",
+          "type": "data",
+          "artifact_id": "e83b6529-2740-432a-aa40-7afc8123af13",
+          "path": "cohort.csv"
+        },
+        {
+          "id": "08e46e81-1f5c-406a-a4cd-97ca5c624789",
+          "label": "config.yaml",
+          "type": "configuration",
+          "artifact_id": "08e46e81-1f5c-406a-a4cd-97ca5c624789",
+          "path": "config.yaml"
+        },
+        {
+          "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "label": "paper.pdf",
+          "type": "paper",
+          "artifact_id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "path": "paper.pdf"
+        },
+        {
+          "id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+          "label": "results.json",
+          "type": "results",
+          "artifact_id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+          "path": "results.json"
+        },
+        {
+          "id": "8f4de747-2695-49ca-a686-a30afd51f769",
+          "label": "train.py",
+          "type": "code",
+          "artifact_id": "8f4de747-2695-49ca-a686-a30afd51f769",
+          "path": "train.py"
+        },
+        {
+          "id": "claim-96fcf1fa95a452",
+          "label": "accuracy: 100.000%",
+          "type": "claim",
+          "claim_id": "claim-96fcf1fa95a452"
+        },
+        {
+          "id": "claim-a112c695846ae3",
+          "label": "accuracy 100.000%",
+          "type": "claim",
+          "claim_id": "claim-a112c695846ae3"
+        },
+        {
+          "id": "claim-887e0acd118ec0",
+          "label": "The released source uses a fixed random seed of 42 and a 25% test part",
+          "type": "claim",
+          "claim_id": "claim-887e0acd118ec0"
+        },
+        {
+          "id": "claim-08cf97f9b2c937",
+          "label": "The associated result artifact records one computed baseline run.",
+          "type": "claim",
+          "claim_id": "claim-08cf97f9b2c937"
+        },
+        {
+          "id": "claim-846c5233716a65",
+          "label": "Scores describe this synthetic dataset only.",
+          "type": "claim",
+          "claim_id": "claim-846c5233716a65"
+        },
+        {
+          "id": "claim-fd9c9870db0d89",
+          "label": "A saved result is not an independent reproduction.",
+          "type": "claim",
+          "claim_id": "claim-fd9c9870db0d89"
+        },
+        {
+          "id": "claim-7eff26a637478a",
+          "label": "The intended deployment population must be established by a researcher",
+          "type": "claim",
+          "claim_id": "claim-7eff26a637478a"
+        },
+        {
+          "id": "claim-ac8d57f3562075",
+          "label": "SYNTHETIC DEMO FIXTURE. Not published research. No real participants.",
+          "type": "claim",
+          "claim_id": "claim-ac8d57f3562075"
+        },
+        {
+          "id": "finding-a7257c613a4c1b",
+          "label": "Repeated individuals may cross the evaluation boundary",
+          "type": "finding",
+          "finding_id": "finding-a7257c613a4c1b",
+          "status": "supported_concern"
+        },
+        {
+          "id": "finding-eb8d2de1492410",
+          "label": "New-individual evaluation changes the evidence boundary",
+          "type": "finding",
+          "finding_id": "finding-eb8d2de1492410",
+          "status": "supported_concern"
+        },
+        {
+          "id": "68b666b6-577e-4738-8a81-f0f5db51ca69",
+          "label": "baseline",
+          "type": "execution",
+          "status": "completed"
+        },
+        {
+          "id": "31458d76-5c82-490f-87b6-28c9707043e4",
+          "label": "grouped",
+          "type": "execution",
+          "status": "completed"
+        },
+        {
+          "id": "generalization",
+          "label": "What should this model generalize to?",
+          "type": "decision",
+          "status": "answered"
+        },
+        {
+          "id": "interpretation-4de9ccf326ea4e",
+          "label": "What population should the evaluation represent?",
+          "type": "decision",
+          "status": "pending"
+        }
+      ],
+      "edges": [
+        {
+          "source": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "target": "claim-96fcf1fa95a452",
+          "type": "derived_from"
+        },
+        {
+          "source": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "target": "claim-a112c695846ae3",
+          "type": "derived_from"
+        },
+        {
+          "source": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "target": "claim-887e0acd118ec0",
+          "type": "derived_from"
+        },
+        {
+          "source": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "target": "claim-08cf97f9b2c937",
+          "type": "derived_from"
+        },
+        {
+          "source": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "target": "claim-846c5233716a65",
+          "type": "derived_from"
+        },
+        {
+          "source": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "target": "claim-fd9c9870db0d89",
+          "type": "derived_from"
+        },
+        {
+          "source": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+          "target": "claim-7eff26a637478a",
+          "type": "derived_from"
+        },
+        {
+          "source": "a66cf322-5e55-4794-bace-185c8705207b",
+          "target": "claim-ac8d57f3562075",
+          "type": "derived_from"
+        },
+        {
+          "source": "e83b6529-2740-432a-aa40-7afc8123af13",
+          "target": "finding-a7257c613a4c1b",
+          "type": "requires_clarification"
+        },
+        {
+          "source": "68b666b6-577e-4738-8a81-f0f5db51ca69",
+          "target": "finding-eb8d2de1492410",
+          "type": "derived_from"
+        },
+        {
+          "source": "31458d76-5c82-490f-87b6-28c9707043e4",
+          "target": "finding-eb8d2de1492410",
+          "type": "derived_from"
+        },
+        {
+          "source": "e83b6529-2740-432a-aa40-7afc8123af13",
+          "target": "68b666b6-577e-4738-8a81-f0f5db51ca69",
+          "type": "derived_from"
+        },
+        {
+          "source": "e83b6529-2740-432a-aa40-7afc8123af13",
+          "target": "31458d76-5c82-490f-87b6-28c9707043e4",
+          "type": "derived_from"
+        },
+        {
+          "source": "e83b6529-2740-432a-aa40-7afc8123af13",
+          "target": "generalization",
+          "type": "requires_clarification"
+        },
+        {
+          "source": "e83b6529-2740-432a-aa40-7afc8123af13",
+          "target": "interpretation-4de9ccf326ea4e",
+          "type": "requires_clarification"
+        },
+        {
+          "source": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+          "target": "claim-96fcf1fa95a452",
+          "type": "supports"
+        },
+        {
+          "source": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+          "target": "claim-a112c695846ae3",
+          "type": "supports"
+        }
+      ]
+    },
+    "adaptive_questions": [
+      {
+        "id": "interpretation-4de9ccf326ea4e",
+        "title": "What population should the evaluation represent?",
+        "why": "If evaluation is intended to represent prediction for unseen individuals, a row-level split may not estimate that setting; if it represents future observations for known individuals, row-level evaluation may be appropriate. The supplied evidence flags this distinction but says entity semantics and intended deployment require human judgment.",
+        "evidence": [
+          {
+            "id": "e83b6529-2740-432a-aa40-7afc8123af13:L1:f84c2e28f5:",
+            "artifact_id": "e83b6529-2740-432a-aa40-7afc8123af13",
+            "path": "cohort.csv",
+            "text": "Repeated entity rows: {'person_id': 840}",
+            "line": 1,
+            "page": null,
+            "cell": null,
+            "pointer": null,
+            "kind": "dataset",
+            "context_excerpt": "Dataset: cohort.csv\nRows inspected: 960\nColumns: signature_0, signature_1, signature_2, signature_3, signature_4, person_id, outcome\nRepeated entity rows: {'person_id': 840}\nDuplicate rows: 840"
+          }
+        ],
+        "options": [
+          {
+            "value": "confirmed",
+            "label": "The stated interpretation applies",
+            "effect": "Retain the concern with this researcher-established context; this does not by itself verify a result."
+          },
+          {
+            "value": "alternative",
+            "label": "A different interpretation applies",
+            "effect": "Mark related findings inconclusive and require revised scientific context."
+          },
+          {
+            "value": "unknown",
+            "label": "I cannot establish that",
+            "effect": "Mark dependent interpretation inconclusive; independent checks continue."
+          }
+        ],
+        "answer": null,
+        "origin": "grounded model clarification",
+        "related_findings": [
+          "finding-a7257c613a4c1b"
+        ],
+        "purpose": "interpretation"
+      }
+    ],
+    "_agent_complete": true
+  },
+  "artifacts": [
+    {
+      "id": "a66cf322-5e55-4794-bace-185c8705207b",
+      "path": "README.md",
+      "kind": "documentation",
+      "size": 208,
+      "sha256": "cbd8f74a1246fe7b166d926d7d70ed23468b6b19e52ba812e5a4446026542adb",
+      "warnings": []
+    },
+    {
+      "id": "e83b6529-2740-432a-aa40-7afc8123af13",
+      "path": "cohort.csv",
+      "kind": "data",
+      "size": 100479,
+      "sha256": "9efbbb43a30d6776427da9f156736ff9f4422b8dd052d4bda88d8d8512ee2531",
+      "warnings": []
+    },
+    {
+      "id": "08e46e81-1f5c-406a-a4cd-97ca5c624789",
+      "path": "config.yaml",
+      "kind": "configuration",
+      "size": 77,
+      "sha256": "d89494b6f572338ab1c2406f953752f47762462f7e45aefcbb06a7b609fb50b6",
+      "warnings": []
+    },
+    {
+      "id": "633259ef-d559-4d9b-9e0e-cf867338fcb4",
+      "path": "paper.pdf",
+      "kind": "paper",
+      "size": 2652,
+      "sha256": "e428eb0cde02e4914f27d1ff9e2709f195296ce4cc791b5094f2a2d21707f73b",
+      "warnings": []
+    },
+    {
+      "id": "0ebb2a12-afa2-4be6-8ec2-564e423847fc",
+      "path": "results.json",
+      "kind": "results",
+      "size": 468,
+      "sha256": "b08400e371b141923ef251f507245ed820f879b488813af1c9050d5392b1a5bd",
+      "warnings": []
+    },
+    {
+      "id": "8f4de747-2695-49ca-a686-a30afd51f769",
+      "path": "train.py",
+      "kind": "code",
+      "size": 637,
+      "sha256": "37b10d2374573de752a6c6ef818398b1df2d2d1cb5210d470e3bfce115788dea",
+      "warnings": []
+    }
+  ],
+  "jobs": [
+    {
+      "id": "8dbec770-d7c9-4c6b-b3de-9d88d7520578",
+      "state": "completed",
+      "checkpoint": "awaiting_input",
+      "error": null
+    },
+    {
+      "id": "3c92d7cd-723d-4ed1-a618-b83809f5ada9",
+      "state": "completed",
+      "checkpoint": "awaiting_input",
+      "error": null
+    }
+  ]
+}

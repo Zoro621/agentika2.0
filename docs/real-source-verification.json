@@ -1,0 +1,32 @@
+{
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/rasbt/mlxtend",
+    "ref": "v0.11.0",
+    "commit": "f08e9e65e6acf66910c626a434dda85eb552bb9d",
+    "sha256": "e538b08f78cc280ae489ffc33995dbe300f30a97470e19b921af9a71446f5291",
+    "linked_papers": []
+  },
+  "accepted_artifacts": 265,
+  "ignored": 357,
+  "paper": {
+    "url": "https://www.theoj.org/joss-papers/joss.00638/10.21105.joss.00638.pdf",
+    "sha256": "8bef485811efd75a9031c3c0bff42bdc7516b0c42ebd0aebe4b5cdbef50424fa",
+    "pages": 2,
+    "anchors": 3,
+    "text_extracted": true
+  },
+  "inspected_code": [
+    {
+      "path": "docs/ipynb2markdown.py",
+      "anchors": 4,
+      "warnings": []
+    },
+    {
+      "path": "docs/make_api.py",
+      "anchors": 15,
+      "warnings": []
+    }
+  ],
+  "scope": "Real published paper/repository ingestion smoke check. No validity or contradiction judgment."
+}

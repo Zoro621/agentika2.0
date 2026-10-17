@@ -1,0 +1,77 @@
+{
+  "provider": "openai",
+  "parsed": {
+    "text": "\n\nSYNTHETIC OCR ACCEPTANCE FIXTURE\n\nTest accuracy: 91.2% across 250 participants.\nTraining: 180 samples. Test: 70 samples.",
+    "anchors": [
+      {
+        "id": "scanned-acceptance:p1:09c05b19f5:",
+        "artifact_id": "scanned-acceptance",
+        "path": "scanned.pdf",
+        "text": "SYNTHETIC OCR ACCEPTANCE FIXTURE\n\nTest accuracy: 91.2% across 250 participants.\nTraining: 180 samples. Test: 70 samples.",
+        "line": null,
+        "page": 1,
+        "cell": null,
+        "pointer": null,
+        "kind": "ocr_passage",
+        "extraction": "api_assisted_ocr"
+      }
+    ],
+    "tables": [],
+    "pages": 1,
+    "page_details": [
+      {
+        "page": 1,
+        "width": 595.2756,
+        "height": 841.8898,
+        "low_text": true,
+        "ocr": true
+      }
+    ],
+    "warnings": [
+      "Page 1: API-assisted OCR; inspect the original image before accepting its quantities"
+    ],
+    "parser_fingerprint": "3dcfa86f85a13656b86020c1af5595c0788703cc2f5b1fe1539be20c2df4aded",
+    "ocr_attempted": [
+      1
+    ]
+  },
+  "questions": [
+    {
+      "id": "ocr-07a579f91d91f0",
+      "title": "Does the recovered text match scanned.pdf page 1?",
+      "why": "Scanned-page extraction is model-assisted. The original page is available for direct inspection; uncertain transcription must not verify a discrepancy.",
+      "evidence": [
+        {
+          "id": "scanned-acceptance:p1:09c05b19f5:",
+          "artifact_id": "scanned-acceptance",
+          "path": "scanned.pdf",
+          "text": "SYNTHETIC OCR ACCEPTANCE FIXTURE\n\nTest accuracy: 91.2% across 250 participants.\nTraining: 180 samples. Test: 70 samples.",
+          "line": null,
+          "page": 1,
+          "cell": null,
+          "pointer": null,
+          "kind": "ocr_passage",
+          "extraction": "api_assisted_ocr"
+        }
+      ],
+      "options": [
+        {
+          "value": "confirmed",
+          "label": "Matches the original page",
+          "effect": "Permit comparable source checks to use the verified transcription."
+        },
+        {
+          "value": "incorrect",
+          "label": "Transcription is incorrect",
+          "effect": "Exclude these recovered quantities from discrepancy verification."
+        },
+        {
+          "value": "unknown",
+          "label": "I cannot verify it",
+          "effect": "Keep the affected checks inconclusive."
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

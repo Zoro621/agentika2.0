@@ -1,0 +1,11 @@
+{
+  "network_connected": false,
+  "application_secrets_present": false,
+  "host_project_visible": false,
+  "network_policy": {
+    "type": "disabled"
+  },
+  "memory_limit": "1g",
+  "teardown_verified": true,
+  "cancellation_destroyed_environment": true
+}

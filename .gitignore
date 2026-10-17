@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.pytest_cache/
+.claimbreaker/
+playwright-report/
+test-results/
+tmp/
+*.egg-info/
+.coverage
+*.tsbuildinfo
+pytest-cache-*/
+.ruff_cache/
+/research/
+/5 - Agentika Participant Handbook.pdf
+.codex/
+.agents/

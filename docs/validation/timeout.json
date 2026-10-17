@@ -1,0 +1,6 @@
+{
+  "seconds": 84.69,
+  "successful_metrics": false,
+  "environment_deleted": true,
+  "error": "Isolated computation failed: Original program failed: Traceback (most recent call last):\n  File \"/mnt/data/claimbreaker-runtime-017f06a0ca844a6382bf48072dafb767/original_worker.py\", line 420, in <module>\n    child(sys.argv[2])\n    ~~~~~^^^^^^^^^^^^^\n  File \"/mnt/data/claimbreaker-runtime-017f06a0ca844a6382bf48072dafb767/original_worker.py\", line 380, in child\n    runpy.run_path(str(entry), run_name=\"__main__\")\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/claimbreaker-original-xu3mtmow/timeout.py\", line 2, in <module>\n    time.sleep(120)\n    ~~~~~~~~~~^^^^^\n  File \"/mnt/data/claimbreaker-runtime-017f06a0ca844a6382bf48072dafb767/original_worker.py\", line 223, in <lambda>\n    lambda *_: (_ for _ in ()).throw(TimeoutError(\"Original execution timed out\")),\n               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/dat"
+}

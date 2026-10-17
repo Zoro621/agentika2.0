@@ -1,0 +1,68 @@
+{
+  "metrics": {
+    "accuracy": 0.85
+  },
+  "metric_events": [
+    {
+      "metric": "accuracy",
+      "value": 0.85,
+      "path": "train.py",
+      "line": 12
+    }
+  ],
+  "folds": [],
+  "repairs": [],
+  "stdout": "accuracy 0.85\n",
+  "entity_overlap": 0,
+  "train_rows": 600,
+  "test_rows": 200,
+  "environment": {
+    "python": "3.13.5",
+    "sklearn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "classification": "original_execution",
+  "seconds": 1.263,
+  "source_hashes": {
+    "train.py": "37b10d2374573de752a6c6ef818398b1df2d2d1cb5210d470e3bfce115788dea",
+    "cohort.csv": "a0547c946aa21ff5595a6da758286ed72daa103f64102c521a10ff1dadfe4cb0"
+  },
+  "helper_sha256": "924f53b1d06512e9958a746779df7e99b25618afc9ea60d69c87459d0bcaffd4",
+  "limitations": [
+    "Original code ran in isolation with metric instrumentation; publication comparability still depends on protocol, dataset, version and human correspondence",
+    "No dependencies were installed and no scientific settings were repaired"
+  ],
+  "dataset_sha256": "a0547c946aa21ff5595a6da758286ed72daa103f64102c521a10ff1dadfe4cb0",
+  "worker_sha256": "fd9790c40c61ee7c3b1e0a79201cd8d8491a130af628279b946c552752a87ea3",
+  "spec": {
+    "target": "outcome",
+    "features": [
+      "signature_0",
+      "signature_1",
+      "signature_2",
+      "signature_3",
+      "signature_4"
+    ],
+    "estimator": "RandomForestClassifier",
+    "params": {
+      "n_estimators": 80,
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    "variant": "baseline",
+    "seed": 42,
+    "test_size": 0.25,
+    "execution_mode": "original",
+    "entry_path": "train.py",
+    "entity": "person_id"
+  },
+  "sandbox": {
+    "provider": "openai",
+    "container_id": "cntr_6ad2b368b1d48191a3eb22e75dccd8dc012bfd138823fe53",
+    "memory_limit": "1g",
+    "network_policy": "disabled",
+    "output_file_id": "cfile_6ad2b36fd1408191ac58b88d07a5bb28",
+    "tool_call_id": "ci_038de525933a7818016ad2b36c081c87d2b592158ec1e0886d"
+  }
+}

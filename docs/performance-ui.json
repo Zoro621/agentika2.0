@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-16T23:24:43.438Z",
+  "profile": {
+    "viewport": "360x800",
+    "deviceScaleFactor": 2,
+    "cpuSlowdown": 4,
+    "network": "4 Mbps down / 1 Mbps up / 100 ms latency",
+    "browser": "msedge, headless",
+    "origin": "http://127.0.0.1:8001; production assets; cold browser context"
+  },
+  "metrics": {
+    "lcpMs": 1228,
+    "cls": 0.01781027153862847,
+    "observedMaxInteractionMs": 168
+  },
+  "scriptRequests": [
+    "index-Fl7muRUH.js",
+    "Scene-CDEkgue9.js",
+    "with-selector-Doj-nzNn.js"
+  ],
+  "limits": "One lab page visit with three settings interactions. Not deployed-field INP or a Lighthouse score. Rerun on the public URL for release acceptance."
+}

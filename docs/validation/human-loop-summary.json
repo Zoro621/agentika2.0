@@ -1,0 +1,17 @@
+{
+  "status": "awaiting_input",
+  "baseline": {
+    "accuracy": 1.0
+  },
+  "corrected": {
+    "accuracy": 0.5,
+    "f1_macro": 0.4994438264738599
+  },
+  "baseline_entities_in_both": 109,
+  "corrected_entities_in_both": 0,
+  "completed_runs_reused_after_restart": true,
+  "execution_question_graph_verified": true,
+  "provider": "openai",
+  "model": "gpt-6-luna",
+  "history_revisions": 1
+}

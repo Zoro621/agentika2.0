@@ -1,0 +1,21 @@
+services:
+  app:
+    build: .
+    image: claimbreaker-app:0.1.0
+    ports: ["127.0.0.1:8000:8000"]
+    environment:
+      CB_DATA_DIR: /data
+      CB_DATABASE_URL: sqlite:////data/claimbreaker.db
+      CB_OFFLINE: "true"
+      CB_PROVIDER: ollama
+      CB_OLLAMA_URL: http://host.docker.internal:11434
+      CB_OLLAMA_MODEL: qwen3:8b
+      # The host broker, never the app or execution sandbox, owns Docker access.
+      CB_RUNNER: broker
+      CB_RUNNER_URL: http://host.docker.internal:7071
+      CB_RUNNER_TOKEN: ${CB_RUNNER_TOKEN:-}
+    volumes: ["claimbreaker-data:/data"]
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    restart: unless-stopped
+volumes:
+  claimbreaker-data:

@@ -1,0 +1,67 @@
+{
+  "metrics": {
+    "accuracy": 0.83375
+  },
+  "metric_events": [],
+  "folds": [
+    {
+      "metric": "accuracy",
+      "values": [
+        0.825,
+        0.815,
+        0.845,
+        0.85
+      ],
+      "mean": 0.83375,
+      "std": 0.01430690392782451,
+      "n_folds": 4
+    }
+  ],
+  "repairs": [],
+  "stdout": "0.83375\n",
+  "entity_overlap": null,
+  "environment": {
+    "python": "3.13.5",
+    "sklearn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "classification": "original_execution",
+  "seconds": 1.252,
+  "source_hashes": {
+    "experiment.ipynb": "0a2685ffaa86462a8d979412422074e68bd5fa29755d51972341a0df00a93367",
+    "cohort.csv": "a0547c946aa21ff5595a6da758286ed72daa103f64102c521a10ff1dadfe4cb0",
+    "__claimbreaker_notebook__.py": "6b42af0cccd29d61cf82e227e63e812f067bd8a9323fa76e56840dec4c37f25f"
+  },
+  "helper_sha256": "5504fc7a5906670eacb9d8549cd9468fed629a43301330fa6c7f93ed2ff68ce5",
+  "limitations": [
+    "Original code ran in isolation with metric instrumentation; publication comparability still depends on protocol, dataset, version and human correspondence",
+    "No dependencies were installed and no scientific settings were repaired"
+  ],
+  "dataset_sha256": "a0547c946aa21ff5595a6da758286ed72daa103f64102c521a10ff1dadfe4cb0",
+  "worker_sha256": "fd9790c40c61ee7c3b1e0a79201cd8d8491a130af628279b946c552752a87ea3",
+  "spec": {
+    "target": "outcome",
+    "features": [
+      "signature_0",
+      "signature_1"
+    ],
+    "estimator": "LogisticRegression",
+    "params": {
+      "max_iter": 200
+    },
+    "variant": "baseline",
+    "seed": 42,
+    "test_size": 0.25,
+    "execution_mode": "original",
+    "entry_path": "experiment.ipynb"
+  },
+  "sandbox": {
+    "provider": "openai",
+    "container_id": "cntr_6ad2af87eb308191842fce5af7bf67640b095755a0ca30eb",
+    "memory_limit": "1g",
+    "network_policy": "disabled",
+    "output_file_id": "cfile_6ad2af916d608191a788ab8aa6e32b54",
+    "tool_call_id": "ci_0108b911a45a4a47016ad2af8d558487d298a8cf02e7833198"
+  }
+}
