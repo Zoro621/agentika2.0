@@ -20,6 +20,6 @@ if ($Image -match ':(latest|main)$' -or $Image -notmatch ':') { throw 'Use a pub
 if (!(Get-Command acc -ErrorAction SilentlyContinue)) { throw 'Install @alternatefutures/acc, authenticate, and select your project. See docs/DEPLOYMENT.md.' }
 & acc whoami
 if ($LASTEXITCODE -ne 0) { throw 'Authenticate the CLI first with acc login, or configure AF_TOKEN and AF_PROJECT_ID privately.' }
-& acc services create --kind docker --image $Image --port 8000 --name claimbreaker -y
+& acc services create --kind docker --image $Image --port 5173 --name claimbreaker -y
 if ($LASTEXITCODE -ne 0) { throw 'Alternate Clouds rejected the deployment. Inspect the CLI error above.' }
 & acc services list

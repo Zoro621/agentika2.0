@@ -25,7 +25,7 @@ docker build -t ghcr.io/YOUR_TEAM/claimbreaker:RELEASE_COMMIT .
 docker push ghcr.io/YOUR_TEAM/claimbreaker:RELEASE_COMMIT
 ```
 
-The image must be public or otherwise pullable by Alternate Clouds. The application runs as UID 10001 and listens on port **8000**. The frontend is included in the image. No Docker socket is required by the hosted profile.
+The image must be public or otherwise pullable by Alternate Clouds. The application runs as UID 10001 and listens on port **5173**, matching the connected repository service's Vite-detected port. Its production server is Uvicorn, serving both the built frontend and API on this port. Keep the service's container port at **5173**. Local development/start scripts still use port 8000 for the API. No Docker socket is required by the hosted profile.
 
 ## 3. Authenticate and deploy
 

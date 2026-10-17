@@ -18,6 +18,6 @@ COPY --from=frontend /build/dist ./dist
 COPY alembic.ini ./
 COPY migrations ./migrations
 USER claimbreaker
-EXPOSE 8000
-HEALTHCHECK --interval=30s --timeout=5s --start-period=30s CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health/ready',timeout=4)"
-CMD ["uvicorn","claimbreaker.app:app","--app-dir","/app/backend","--host","0.0.0.0","--port","8000","--workers","1","--proxy-headers"]
+EXPOSE 5173
+HEALTHCHECK --interval=30s --timeout=5s --start-period=30s CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5173/api/v1/health/ready',timeout=4)"
+CMD ["uvicorn","claimbreaker.app:app","--app-dir","/app/backend","--host","0.0.0.0","--port","5173","--workers","1","--proxy-headers"]
