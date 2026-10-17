@@ -2,8 +2,6 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import field_validator
-from .origins import normalize_origin
 from dotenv import load_dotenv
 import os
 
@@ -19,7 +17,7 @@ class Settings(BaseSettings):
     database_url: str = "sqlite:///.claimbreaker/claimbreaker.db"
     session_secret: str = ""
     secure_cookies: bool = False
-    public_origin: str = ""
+    public_origin: str = ""  # Legacy setting accepted for deployment compatibility; unused.
     offline: bool = False
     provider: Literal["auto", "openai", "ollama", "deterministic"] = "auto"
     openai_model: str = "gpt-6-luna"
@@ -42,11 +40,6 @@ class Settings(BaseSettings):
     max_case_seconds: int = 600
     max_agent_steps: int = 24
     max_session_cases: int = 12
-
-    @field_validator("public_origin")
-    @classmethod
-    def validate_public_origin(cls, value: str) -> str:
-        return normalize_origin(value) if value else ""
 
     def prepare(self):
         self.data_dir.mkdir(parents=True, exist_ok=True)

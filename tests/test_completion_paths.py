@@ -342,7 +342,7 @@ async def test_provider_prospective_budget_never_sends_an_over_budget_request(mo
     assert p.input_chars == 319990 and p.steps == 0 and p.warnings
 
 
-def test_mutations_reject_same_hostname_on_another_port():
+def test_mutations_allow_proxy_port_difference():
     from fastapi.testclient import TestClient
     from claimbreaker.app import app
 
@@ -350,7 +350,7 @@ def test_mutations_reject_same_hostname_on_another_port():
         response = client.post(
             "/api/v1/cases", json={}, headers={"origin": "http://testserver:9999"}
         )
-        assert response.status_code == 403
+        assert response.status_code == 201
         assert (
             client.post(
                 "/api/v1/cases", json={}, headers={"origin": "http://testserver"}

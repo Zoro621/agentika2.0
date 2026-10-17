@@ -21,7 +21,6 @@ from .execution import runner_status, terminate
 from .reports import pdf_report, json_report, evidence_bundle
 from .samples import SAMPLES, build_sample
 from .http_limits import BodyLimitMiddleware
-from .origins import mutation_origin_allowed
 from .parser_process import parse_bounded
 from . import storage
 
@@ -53,15 +52,7 @@ app.add_middleware(
 
 
 @app.middleware("http")
-async def headers_and_origin(request, call_next):
-    if request.method in {"POST", "DELETE", "PATCH", "PUT"}:
-        origin = request.headers.get("origin")
-        if origin and not mutation_origin_allowed(
-            origin, str(request.base_url), settings().public_origin
-        ):
-            return JSONResponse(
-                {"detail": "Cross-origin mutations are not accepted"}, status_code=403
-            )
+async def security_headers(request, call_next):
     response = await call_next(request)
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["Referrer-Policy"] = "same-origin"
