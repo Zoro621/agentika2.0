@@ -52,6 +52,7 @@ Required service environment:
 | `CB_STORAGE_BUCKET` | `claimbreaker` (private bucket) |
 | `CB_SESSION_SECRET` | Stable random secret |
 | `CB_SECURE_COOKIES` | `true` |
+| `CB_PUBLIC_ORIGIN` | Exact public HTTPS origin, e.g. `https://your-service-app.alternatefutures.ai` (no path) |
 | `CB_OFFLINE` | `false` |
 | `CB_RUNNER` | `e2b` |
 | `E2B_API_KEY` | Private sandbox key |
@@ -61,6 +62,8 @@ Required service environment:
 | `GITHUB_TOKEN` | Optional read-only public-repository access |
 
 Run `alembic upgrade head` against a new configured database before the application's first deployment. The first-release application also creates initial tables on startup for local ease. An already bootstrapped local database can be stamped `0001` only after confirming it matches the initial schema; do not run an initial create-table migration over existing tables. Future schema changes require new migration revisions. Case sources are uploaded to private object storage before their metadata commits. Local disk is a cache; PostgreSQL and private object storage are authoritative for hosted recovery.
+
+Set `CB_PUBLIC_ORIGIN` to the URL users open in their browser. TLS terminates at the hosting proxy, so Uvicorn may see an internal HTTP URL; the configured public origin keeps browser mutation checks exact without trusting arbitrary forwarded headers. A wrong or missing origin can cause `Cross-origin mutations are not accepted`. Local operation defaults to checking the request origin, including its port.
 
 ## 4. Validate the public service
 
